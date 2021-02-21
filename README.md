@@ -1,6 +1,16 @@
-This is a Docker environment for cross-compiling Ada arm-eabi binaries on x86_64.
+A Docker environment for cross-compiling Ada arm-eabi binaries on x86_64.
 
 # Getting started
+
+Choose one:
+
+## Docker Hub
+
+This image is automatically built and made available on Docker Hub.
+
+    docker pull synack/ada-builder:latest
+
+## Local build
 
     docker build -t ada-builder .
 
@@ -12,7 +22,7 @@ Assuming all of your dependencies are in the Alire index, this command will buil
 
 ## With dependencies not in the public Alire index
 
-The easiest way to do this is to write a shell script to be executed in the build environment. The following example shows how to build the pico_examples project with local copies of its dependencies.
+The easiest way to do this is to write a shell script to be executed in the build environment. The following example shows how to build the pico_examples project with local copies of some of its dependencies.
 
 ### pico-build.sh
 ```shell
